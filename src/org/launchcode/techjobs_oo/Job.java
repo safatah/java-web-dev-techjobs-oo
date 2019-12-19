@@ -96,5 +96,16 @@ public class Job {
         return Objects.hash(id, name, employer, location, positionType, coreCompetency);
     }
 
+    @Override
+    public String toString() {
+        String stringForm = " \nID: " + this.id  + "\n";
+        stringForm += "Name: " + (this.name == "" ? "Data not available \n" : this.name + "\n");
+        stringForm += "Employer: " + (this.employer.toString() == "" ? "Data not available \n" : this.employer.toString() + "\n");
+        stringForm += "Location: " + (this.location.toString() == "" ? "Data not available \n" : this.location.toString() + "\n");
+        stringForm += "Position Type: " + (this.positionType.toString() == "" ? "Data not available \n" : this.positionType.toString() + "\n");
+        stringForm += "Core Competency: " + (this.coreCompetency.toString() == "" ? "Data not available \n " : this.coreCompetency.toString() + "\n ");
+
+        return stringForm;
+    }
 
 }
